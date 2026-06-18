@@ -37,10 +37,6 @@ class LandingToRawProcessor:
             lambda acc, nxt: acc.unionByName(nxt, allowMissingColumns=True),
             (self._force_cast_to_string(p, landing_path) for p in landing_paths),
         )
-    
-    def _clear_landing_path(self, landing_path: str) -> None:
-        logger.info(f"Removendo dados do {landing_path}")
-        self.dbutils.fs.rm(landing_path, True)
 
     def process(self, landing_path: str, target_table: str) -> None:
         logger.info(f"Processando dados do {landing_path} para {target_table}")
@@ -55,4 +51,3 @@ class LandingToRawProcessor:
             .saveAsTable(target_table)
         )
         logger.info(f"Processamento concluído")
-        self._clear_landing_path(landing_path)

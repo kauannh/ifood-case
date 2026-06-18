@@ -15,7 +15,6 @@ class RawToTrustedProcessor:
     def __init__(self, spark: SparkSession):
         self.spark = spark
     
-    # TODO: refatorar para um utilitario com convencao de casts
     def _apply_schema(self, df: DataFrame, schema: dict[str, str]) -> DataFrame:
         df = df.select(*schema.keys())
         for column, target_type in schema.items():

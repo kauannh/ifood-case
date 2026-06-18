@@ -41,7 +41,6 @@ class LandingToRawProcessor:
     def process(self, landing_path: str, target_table: str) -> None:
         logger.info(f"Processando dados do {landing_path} para {target_table}")
         df = self._read_all(landing_path)
-        # TODO: deixar generico o suficiente a nivel de parametrizar particoes
         (
             df.write.format("delta")
             .mode("overwrite")

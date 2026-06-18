@@ -1,7 +1,5 @@
 from datetime import datetime
-from datetime import timedelta
 from dateutil.rrule import rrule, MONTHLY
-from pyspark.sql import functions as F
 
 import requests
 import logging

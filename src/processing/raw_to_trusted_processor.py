@@ -1,4 +1,3 @@
-from pyspark.sql import SparkSession
 from pyspark.sql import SparkSession, DataFrame, functions as F
 
 from datetime import datetime

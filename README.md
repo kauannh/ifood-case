@@ -1,6 +1,6 @@
 # ifood-case
 
-Solução para o case técnico de Data Architect do iFood: ingestão das corridas de táxi de NY (Janeiro a Maio de 2023), disponibilização dos dados para consumo via SQL e análises sobre eles.
+Solução para o case técnico: ingestão das corridas de táxi de NY (Janeiro a Maio de 2023), disponibilização dos dados para consumo via SQL e análises sobre eles.
 
 Todo o projeto foi desenvolvido no [Databricks Community Edition](https://community.cloud.databricks.com/).
 
